@@ -16,13 +16,22 @@ const reset = document.getElementById("reset");
 
 const message = document.querySelector(".message");
 
+function isNumber() {
+  const isNumb = userInput.value.match(/^[0-9]+$/);
+
+  if(!isNumb) {
+    alert("Wrong input Duellist !"); 
+  }
+}
+
 // If the player receive dammage
 
 dammage.addEventListener("click", function () {
+
   scoreIni = eval(scoreIni - userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
-  userInput.value = ""; 
+  userInput.value = "";
 
   if (scoreIni <= 0) {
     message.innerHTML = "This is a lesson, not the end";
@@ -39,7 +48,7 @@ heal.addEventListener("click", function () {
   scoreIni = scoreIni + parseInt(userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
-  userInput.value = ""; 
+  userInput.value = "";
 });
 
 reset.addEventListener("click", function () {
