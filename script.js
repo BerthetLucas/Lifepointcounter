@@ -1,20 +1,43 @@
-let screen = document.getElementById("result");
+let scoreIni = 8000; 
 
-function display(newvalue) {
-  screen.value = screen.value + newvalue;
-  return newvalue;
-}
+let display = document.querySelector(".lifePoint"); 
 
-function solve() {
-  let acalculer = screen.value;
+display.innerHTML = scoreIni; 
 
-  let res = eval(screen.value);
+let userInput = document.querySelector(".display"); 
 
-  screen.value = res;
+const btn = document.getElementById('btn'); 
 
-  return res;
-}
+const heal = document.getElementById('heal'); 
 
-function clearScreen() {
-document.getElementById('result').value = "";
-}
+
+btn.addEventListener("click", function(){
+    console.log("btn cliqué"); 
+
+    scoreIni = eval(scoreIni - userInput.value); 
+    console.log(scoreIni); 
+    display.innerHTML = scoreIni;
+
+
+    const message = document.querySelector('.message'); 
+
+    if (scoreIni === 0) {
+    
+        message.innerHTML ="Vous avez perdu";
+    
+    } else {
+    
+        message.innerHTML= "Le duel continue";
+    }; 
+    
+}); 
+
+heal.addEventListener("click", function(){
+    console.log("btn cliqué"); 
+
+    scoreIni = scoreIni + parseInt(userInput.value); 
+    console.log(scoreIni); 
+    display.innerHTML = scoreIni;
+    
+}); 
+

@@ -1,10 +1,5 @@
-.display {
-    width : 5em; 
-    height : 2em; 
-    background-color : white; 
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2em;
+#lifepoint{
+    height : 5em;
+    width: 5em;
+    background-color: aqua;
 }
