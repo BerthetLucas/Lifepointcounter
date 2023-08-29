@@ -28,6 +28,7 @@ function isNumber() {
 
 dammage.addEventListener("click", function () {
 
+
   scoreIni = eval(scoreIni - userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
