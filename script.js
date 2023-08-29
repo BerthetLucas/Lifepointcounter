@@ -10,6 +10,9 @@ const btn = document.getElementById('btn');
 
 const heal = document.getElementById('heal'); 
 
+const reset = document.getElementById('reset')
+
+const message = document.querySelector('.message'); 
 
 btn.addEventListener("click", function(){
     console.log("btn cliqué"); 
@@ -19,7 +22,7 @@ btn.addEventListener("click", function(){
     display.innerHTML = scoreIni;
 
 
-    const message = document.querySelector('.message'); 
+    
 
     if (scoreIni === 0) {
     
@@ -41,3 +44,9 @@ heal.addEventListener("click", function(){
     
 }); 
 
+reset.addEventListener("click", function(){
+    scoreIni = 8000; 
+    display.innerHTML = scoreIni;
+    message.innerHTML=""; 
+    userInput.value=""; 
+})
