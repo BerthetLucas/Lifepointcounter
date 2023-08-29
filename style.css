@@ -1,30 +1,109 @@
-body{
-    height : 100vh; 
-    width : 100%; 
-    background-image: url(./img/pexels-tolga-deniz-aran-11854580.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+:root {
+  --red: #ea3739;
+  --green: #597c9a;
+  --yellow: #d7bd49;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+@font-face {
+    font-family: MatrixBold;
+    src : url(./font/Matrix-Bold.ttf);
+}
+
+@font-face {
+    font-family: Matrixxl;
+    src : url(./font/MatrixIIOT-Bold.ttf); 
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2em;
+    color: var(--yellow);
+    font-family: MatrixBold;
+  }
+  
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./img/pexels-tolga-deniz-aran-11854580.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .lifePoint {
-    height : 25vh; 
-    color : white; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em; ;
-
+  height: 25vh;
+  color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  font-family: Matrixxl;
 }
 
-
 input {
-    width : 80%; 
-    height : 2em
+  width: 80%;
+  height: 2em;
 }
 
 .display-container {
-    height : 10vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+button {
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+}
+
+#dammage {
+  background-color: var(--red);
+  font-weight: bold;
+  color: white;
+  font-family: MatrixBold;
+  font-size: 1em;
+}
+
+#heal {
+  background-color: var(--green);
+  font-weight: bold;
+  color: white;
+  font-family: MatrixBold;
+  font-size: 1em;
+}
+
+#reset {
+  background-color: var(--yellow);
+  font-weight: bold;
+  color: white;
+  font-family: MatrixBold;
+  font-size: 1em;
+
+.message {
+  color: var(--yellow);
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 2em;
+  font-family: MatrixBold;
+}
+

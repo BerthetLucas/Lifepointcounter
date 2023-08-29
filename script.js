@@ -1,52 +1,48 @@
-let scoreIni = 8000; 
+// Variables
 
-let display = document.querySelector(".lifePoint"); 
+let scoreIni = 8000;
 
-display.innerHTML = scoreIni; 
+let display = document.querySelector(".lifePoint");
 
-let userInput = document.querySelector(".display"); 
+display.innerHTML = "LP : " + scoreIni;
 
-const btn = document.getElementById('btn'); 
+let userInput = document.querySelector(".display");
 
-const heal = document.getElementById('heal'); 
+const dammage = document.getElementById("dammage");
 
-const reset = document.getElementById('reset')
+const heal = document.getElementById("heal");
 
-const message = document.querySelector('.message'); 
+const reset = document.getElementById("reset");
 
-btn.addEventListener("click", function(){
-    console.log("btn cliqué"); 
+const message = document.querySelector(".message");
 
-    scoreIni = eval(scoreIni - userInput.value); 
-    console.log(scoreIni); 
-    display.innerHTML = scoreIni;
+// If the player receive dammage
 
+dammage.addEventListener("click", function () {
+  scoreIni = eval(scoreIni - userInput.value);
+  console.log(scoreIni);
+  display.innerHTML = "LP : " + scoreIni;
 
-    
+  if (scoreIni <= 0) {
+    message.innerHTML = "This is a lesson, not the end";
+  } else if (scoreIni > 4000) {
+    message.innerHTML = "Believe in the cards'soul";
+  } else {
+    message.innerHTML = "The battle isn't over !";
+  }
+});
 
-    if (scoreIni === 0) {
-    
-        message.innerHTML ="Vous avez perdu";
-    
-    } else {
-    
-        message.innerHTML= "Le duel continue";
-    }; 
-    
-}); 
+// if the player gain lifepoints
 
-heal.addEventListener("click", function(){
-    console.log("btn cliqué"); 
+heal.addEventListener("click", function () {
+  scoreIni = scoreIni + parseInt(userInput.value);
+  console.log(scoreIni);
+  display.innerHTML = "LP : " + scoreIni;
+});
 
-    scoreIni = scoreIni + parseInt(userInput.value); 
-    console.log(scoreIni); 
-    display.innerHTML = scoreIni;
-    
-}); 
-
-reset.addEventListener("click", function(){
-    scoreIni = 8000; 
-    display.innerHTML = scoreIni;
-    message.innerHTML=""; 
-    userInput.value=""; 
-})
+reset.addEventListener("click", function () {
+  scoreIni = 8000;
+  display.innerHTML = "LP : " + scoreIni;
+  message.innerHTML = "";
+  userInput.value = "";
+});
