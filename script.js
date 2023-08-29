@@ -22,6 +22,7 @@ dammage.addEventListener("click", function () {
   scoreIni = eval(scoreIni - userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
+  userInput.value = ""; 
 
   if (scoreIni <= 0) {
     message.innerHTML = "This is a lesson, not the end";
@@ -38,6 +39,7 @@ heal.addEventListener("click", function () {
   scoreIni = scoreIni + parseInt(userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
+  userInput.value = ""; 
 });
 
 reset.addEventListener("click", function () {
