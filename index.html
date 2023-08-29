@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-   
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
+    <title>Document</title>
+  </head>
+  <body>
     <div class="lifePoint"></div>
 
-    <table>
-        <td><input type="display" class="display"></td>
-    </table>
-  
-    <button id="btn">Hit</button>
+    <div class="display-container">
+      <input type="display" class="display" />
+    </div>
 
-    <button id="heal">heal</button>
+    <div class="btn-container">
+      <button id="btn">Dammage</button>
 
-    <button id="reset">Reset</button>
+      <button id="heal">Gain</button>
 
-    <div class="message"></div>
+      <button id="reset">Restart another game</button>
 
+      <div class="message"></div>
+    </div>
+    
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

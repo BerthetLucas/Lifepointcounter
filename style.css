@@ -1,5 +1,30 @@
-#lifepoint{
-    height : 5em;
-    width: 5em;
-    background-color: aqua;
+body{
+    height : 100vh; 
+    width : 100%; 
+    background-image: url(./img/pexels-tolga-deniz-aran-11854580.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lifePoint {
+    height : 25vh; 
+    color : white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em; ;
+
+}
+
+
+input {
+    width : 80%; 
+    height : 2em
+}
+
+.display-container {
+    height : 10vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
