@@ -16,18 +16,17 @@ const reset = document.getElementById("reset");
 
 const message = document.querySelector(".message");
 
-function isNumber() {
-  const isNumb = userInput.value.match(/^[0-9]+$/);
 
-  if(!isNumb) {
-    alert("Wrong input Duellist !"); 
-  }
-}
 
 // If the player receive dammage
 
 dammage.addEventListener("click", function () {
 
+    const isNumb = userInput.value.match(/^[0-9]+$/);
+
+    if (isNumb === null) {
+        alert("Wrong input Duellist !");
+    }else{
 
   scoreIni = eval(scoreIni - userInput.value);
   console.log(scoreIni);
@@ -41,16 +40,24 @@ dammage.addEventListener("click", function () {
   } else {
     message.innerHTML = "The battle isn't over !";
   }
-});
+}});
 
 // if the player gain lifepoints
 
 heal.addEventListener("click", function () {
+
+    const isNumb = userInput.value.match(/^[0-9]+$/);
+
+    if (isNumb === null) {
+        alert("Wrong input Duellist !");
+    }else{
+
+
   scoreIni = scoreIni + parseInt(userInput.value);
   console.log(scoreIni);
   display.innerHTML = "LP : " + scoreIni;
   userInput.value = "";
-});
+}});
 
 reset.addEventListener("click", function () {
   scoreIni = 8000;
